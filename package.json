@@ -4,7 +4,8 @@
   "description": "test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron .",
+    "publish": "electron-builder -p always"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,15 @@
   },
   "dependencies": {
     "electron-updater": "^4.3.9"
+  },
+  "build": {
+    "appId": "world.agathosune.launcher",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "Nereus-Agathosune",
+        "repo": "launcher-electron"
+      }
+    ]
   }
 }
